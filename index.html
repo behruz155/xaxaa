@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ism Kiritish</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      text-align: center;
+      margin-top: 50px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      width: 200px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <form action="bosh.html" id="nameForm" method="get">
+    <input type="text" id="userName" placeholder="Ismingizni kiriting" required>
+  </form>
+  <center><a href="bosh.html"> <input type="submit" value="Yuborish"></a></center>
+
+  
+
+  <script>
+    // Form va input elementlarini olish
+    const form = document.getElementById('nameForm');
+    const userNameInput = document.getElementById('userName');
+    const greetingElement = document.getElementById('greeting');
+
+    // Form yuborilganda ismni h2 tagiga yozish
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Formni qayta yuklashni oldini olish
+      const userName = userNameInput.value.trim();
+      if (userName) {
+        greetingElement.textContent = `Salom, ${userName}!`;
+        
+      }
+      if (userName) {
+        window.location.href = "bosh.html"; // Sahifaga o'tish
+        // yoki `window.location.replace("bosh.html");` ni ishlatishingiz mumkin
+      }
+
+    });
+  </script>
+</body>
+</html>

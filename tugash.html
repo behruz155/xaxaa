@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ismni Ko'rsatish</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    h1 {
+      color: blue;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-top: -50%;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 28px;
+        margin-top: -30%;
+        margin-bottom: 20px;
+      }
+      img {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://media.licdn.com/dms/image/v2/C5612AQGbKdCiOy6vGg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1520164724858?e=1740614400&v=beta&t=5HVXkQf0GtTy59bOFFL8lDuwrRzaG_vgwnqul6O18Jw" alt="">
+  <h1 id="greeting"></h1>
+
+  
+
+  <script>
+    // Foydalanuvchi ismni olish va h2 tagiga qo'shish
+    const greetingElement = document.getElementById('greeting');
+    const userName = "Behruz"; // Mana bu yerga foydalanuvchi ismini kiriting
+
+    if (userName) {
+      greetingElement.textContent = `${userName} geyligingni oxiritan oloding a`;
+    }
+  </script>
+</body>
+</html>
